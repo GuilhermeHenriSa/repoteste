@@ -1,5 +1,5 @@
 # Python package
- task: SnykSecurityScan@1
+  task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'TestePOC'
     testType: 'app'
