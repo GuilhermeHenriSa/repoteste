@@ -1,7 +1,7 @@
 # Python package
 - task: SnykSecurityScan@1
   inputs:
-    serviceConnectionEndpoint: 'Teste-POC'
+    serviceConnectionEndpoint: 'TestePOC'
     testType: 'app'
     monitorWhen: 'always'
     failOnIssues: true
