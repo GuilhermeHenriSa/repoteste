@@ -39,7 +39,7 @@ steps:
 
 - task: SnykSecurityScan@1
   inputs:
-    serviceConnectionEndpoint: 'TestePOC'
+    serviceConnectionEndpoint: 'Teste-POC'
     testType: 'app'
     monitorWhen: 'always'
     failOnIssues: true
