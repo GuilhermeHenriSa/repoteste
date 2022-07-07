@@ -34,11 +34,11 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
-  
-  - task: SnykSecurityScan@1
-    inputs:
-      serviceConnectionEndpoint: 'Teste-POC'
-      testType: 'app'
-      monitorWhen: 'always'
-      failOnIssues: true
+
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'Teste-POC'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
 
