@@ -25,12 +25,6 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
   
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'Teste-POC'
-    testType: 'app'
-    monitorWhen: 'always'
-    failOnIssues: true
 
 - script: |
     python -m pip install --upgrade pip
@@ -41,5 +35,12 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'Teste-POC'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
 
 
