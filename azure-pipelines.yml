@@ -24,6 +24,13 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
+  
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'Teste-POC'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
 
 - script: |
     python -m pip install --upgrade pip
@@ -35,10 +42,4 @@ steps:
     pytest
   displayName: 'pytest'
 
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'Teste-POC'
-    testType: 'app'
-    monitorWhen: 'always'
-    failOnIssues: true
 
